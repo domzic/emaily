@@ -10,10 +10,6 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
