@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Payments from "./Payments";
+import "./styles/Header.scss";
 
 class Header extends Component {
 
@@ -27,7 +28,7 @@ class Header extends Component {
         <div className="nav-wrapper blue">
           <Link 
             to={this.props.auth ? '/surveys' : '/'} 
-            className="left brand-logo"
+            className="left brand-logo headerLogo"
           >
             Emaily
           </Link>
